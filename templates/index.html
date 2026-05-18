@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flask Todo App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 My Todo App</h1>
+      <p class="subtitle">Built with Flask &amp; Python</p>
+    </header>
+    <div class="input-box">
+      <input type="text" id="todo-input" placeholder="Add a new task..." />
+      <button onclick="addTodo()">Add</button>
+    </div>
+    <ul class="todo-list" id="todo-list">
+      {% for todo in todos %}
+      <li class="todo-item {% if todo.done %}done{% endif %}" id="item-{{ todo.id }}">
+        <input type="checkbox" {% if todo.done %}checked{% endif %} onchange="toggleTodo({{ todo.id }})"/>
+        <div class="todo-text">
+          <span class="title">{{ todo.title }}</span>
+          <span class="date">{{ todo.created_at }}</span>
+        </div>
+        <button class="delete-btn" onclick="deleteTodo({{ todo.id }})">✕</button>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if not todos %}
+    <p class="empty-msg">No tasks yet. Add one above! 🚀</p>
+    {% endif %}
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

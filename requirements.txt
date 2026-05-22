@@ -1,2 +1,2 @@
-1. flask
-2. pytest
+pip install flask
+

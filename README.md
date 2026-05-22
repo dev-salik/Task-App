@@ -12,8 +12,8 @@ A clean and simple Todo web app built with **Python + Flask**.
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/flask-todo-app.git
-cd flask-todo-app
+git clone https://github.com/dev-salik/Task-App.git
+cd Task-App
 
 # 2. Create virtual environment
 python -m venv venv

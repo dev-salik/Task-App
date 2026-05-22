@@ -11,18 +11,18 @@ A clean and simple Todo web app built with **Python + Flask**.
 ## 🛠️ Setup & Run
 
 ```bash
-# 1. Clone the repo
+1. Clone the repo
 git clone https://github.com/dev-salik/Task-App.git
 cd Task-App
 
-# 2. Create virtual environment
+2. Create virtual environment
 python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
+source venv/bin/activate   ~ Windows: venv\Scripts\activate
 
-# 3. Install dependencies
+3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Run the app
+4. Run the app
 python app.py
 ```
 
